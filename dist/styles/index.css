@@ -1,0 +1,177 @@
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaDisplay-Regular.otf");
+  font-style: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+input, button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+body {
+  margin: 0 auto;
+  font-family: "Plus Jakarta Sans", Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaDisplay-Regular.otf");
+  font-style: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+input, button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+body {
+  margin: 0 auto;
+  font-family: "Plus Jakarta Sans", Arial, Helvetica, sans-serif;
+}
+
+.header {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #ddd;
+}
+.header__container {
+  width: 100%;
+  display: block;
+  padding-top: 5px;
+  margin: 10px auto;
+}
+.header__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 65px;
+}
+.header__logo {
+  font-size: 24px;
+  font-weight: 600;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header__item {
+  min-width: 50px;
+}
+.header__link {
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+}
+.header__body {
+  background: #dedede;
+  height: 600px;
+  padding-top: 160px;
+}
+.header__block {
+  margin: 0 auto;
+  margin-bottom: 0;
+  width: 400px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header__main-title {
+  font-size: 32px;
+  font-weight: 600;
+}
+.header__sub-title {
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 4px;
+}
+.header__btn {
+  width: 120px;
+  height: 40px;
+  background: rgb(2, 251, 126);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 10px;
+}
+
+* [class$=container] {
+  margin: 0 auto;
+  max-width: 1920px;
+}
+@media (max-width: 1280px) {
+  * [class$=container] {
+    max-width: 1170px;
+  }
+}
+@media (max-width: 1024px) {
+  * [class$=container] {
+    max-width: 920px;
+  }
+}
+@media (max-width: 980px) {
+  * [class$=container] {
+    max-width: 920px;
+  }
+}
+@media (max-width: 768px) {
+  * [class$=container] {
+    max-width: 720px;
+  }
+}
+@media (max-width: 520px) {
+  * [class$=container] {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+}
+
+* [class$=container-sm] {
+  margin: 0 auto;
+  width: 520px;
+}
+
+* [class$=container-md] {
+  margin: 0 auto;
+  width: 720px;
+}
+
+.drag {
+  width: 100%;
+}
+.drag__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 320px;
+  padding: 10px;
+}
+.drag__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 120px;
+  border: 1px solid #000;
+}
