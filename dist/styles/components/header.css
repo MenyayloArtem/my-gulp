@@ -4,10 +4,18 @@
   font-style: normal;
   font-style: normal;
 }
+body {
+  overflow-x: hidden;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+ul, li {
+  list-style: none;
 }
 
 input, button {
@@ -22,7 +30,7 @@ body {
 }
 
 .header {
-  min-width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid #ddd;
@@ -35,9 +43,12 @@ body {
 }
 .header__menu {
   display: flex;
+  max-width: 100%;
   align-items: center;
   justify-content: space-between;
   height: 65px;
+  padding: 0 10px;
+  position: relative;
 }
 .header__logo {
   font-size: 24px;
@@ -46,10 +57,47 @@ body {
 .header__nav {
   display: flex;
   align-items: center;
+}
+.header__items {
+  display: flex;
+  align-items: center;
   gap: 20px;
 }
+.header__items.visible {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .header__items {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    width: 90vw;
+    gap: 0;
+    top: 65px;
+    left: 0;
+    padding-left: 10px;
+  }
+  .header__items .header__item {
+    height: 30px;
+  }
+}
+.header__burger-menu {
+  display: none;
+}
+.header__burger-menu img {
+  max-width: 24px;
+}
+@media (max-width: 768px) {
+  .header__burger-menu {
+    display: block;
+  }
+}
 .header__item {
+  display: flex;
+  align-items: center;
   min-width: 50px;
+  height: 30px;
 }
 .header__link {
   text-decoration: none;
@@ -57,7 +105,6 @@ body {
   color: #333;
 }
 .header__body {
-  background: #dedede;
   height: 600px;
   padding-top: 160px;
 }
@@ -71,19 +118,18 @@ body {
   align-items: center;
 }
 .header__main-title {
-  font-size: 32px;
+  font-size: 38px;
   font-weight: 600;
 }
 .header__sub-title {
-  font-size: 18px;
-  font-weight: 400;
-  margin-top: 4px;
+  font-size: 22px;
+  margin-top: 6px;
 }
 .header__btn {
   width: 120px;
   height: 40px;
-  background: rgb(2, 251, 126);
-  border-radius: 20px;
+  background: #333;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;

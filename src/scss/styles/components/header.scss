@@ -2,7 +2,7 @@
 @import "../../deps/vars.scss";
 
 .header {
-    min-width: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid $lightColor;
@@ -16,9 +16,12 @@
 
     &__menu {
         display: flex;
+        max-width: 100%;
         align-items: center;
         justify-content: space-between;
         height: 65px;
+        padding: 0 10px;
+        position: relative;
     }
 
     &__logo {
@@ -29,11 +32,52 @@
     &__nav {
         display: flex;
         align-items: center;
+    }
+
+    &__items {
+        display: flex;
+        align-items: center;
         gap: 20px;
+
+        &.visible {
+            display: flex;
+        }
+
+        @media (max-width: 768px) {
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            position: absolute;
+            width: 90vw;
+            gap: 0;
+            top: 65px;
+            left: 0;
+            padding-left: 10px;
+            
+
+            .header__item {
+                height: 30px;
+            }
+        }
+    }
+
+    &__burger-menu {
+        display: none;
+
+        img {
+            max-width: 24px;
+        }
+
+        @media (max-width: 768px) {
+            display: block;
+        }
     }
 
     &__item {
+        display: flex;
+        align-items: center;
         min-width: 50px;
+        height: 30px;
     }
 
     &__link {
@@ -43,7 +87,6 @@
     }
 
     &__body {
-        background: #dedede;
         height: 600px;
         padding-top: 160px;
     }
@@ -59,21 +102,20 @@
     }
 
     &__main-title {
-        font-size: 32px;
+        font-size: 38px;
         font-weight: 600;
     }
 
     &__sub-title {
-        font-size: 18px;
-        font-weight: 400;
-        margin-top: 4px;
+        font-size: 22px;
+        margin-top: 6px;
     }
 
     &__btn {
         width: 120px;
         height: 40px;
-        background: $greenColor;
-        border-radius: 20px;
+        background: #333;
+        border-radius: 8px;
         display: flex;
         justify-content: center;
         align-items: center;
