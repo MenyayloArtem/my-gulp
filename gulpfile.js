@@ -6,6 +6,7 @@ import scss from "./gulp/tasks/scss.js"
 import assets from "./gulp/tasks/assets.js"
 import path from "./gulp/configs/path.js"
 import js from "./gulp/tasks/js.js"
+import server from "./gulp/configs/server.js"
 
 function clear() {
     return deleteAsync(`dist/**`)
@@ -20,8 +21,8 @@ function watcher(){
     gulp.watch(path.watch.js,update)
 }
 
-gulp.task("default",gulp.series(
+gulp.task("default",gulp.parallel(
     update,
     watcher,
+    'server'
 ))
-

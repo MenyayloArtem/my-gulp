@@ -1,8 +1,9 @@
 import browserSync from "browser-sync"
+import gulp from 'gulp'
 
-export const server = browserSync.init({
+export default gulp.task('server',() => browserSync.init({
     server : {
         baseDir : "dist/"
     },
     notify : false
-})
+}))
